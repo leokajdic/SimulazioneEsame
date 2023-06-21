@@ -25,7 +25,6 @@ public class Server {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(portNumber);
-            System.out.println("Server in ascolto sulla porta " + portNumber);
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();
@@ -34,7 +33,6 @@ public class Server {
                 thread.start();
             }
         } catch (IOException e) {
-            System.err.println("Errore nell'avvio del server:");
             e.printStackTrace();
         }
     }

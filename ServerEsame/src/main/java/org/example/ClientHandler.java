@@ -20,7 +20,7 @@ public class ClientHandler implements Runnable {
         this.cars = cars;
         this.gson = new Gson();
 
-        System.out.println("Nuova connessione da " + clientSocket.getInetAddress());
+        System.out.println(clientSocket.getInetAddress());
     }
 
     public void run() {
